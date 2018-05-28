@@ -1,82 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <!--Toolbar-->
-    <include layout="@layout/toolbar_main"/>
+    <include
+        android:id="@+id/toolbarMain"
+        layout="@layout/toolbar_main" />
 
 
     <!--Content-->
     <LinearLayout
-        android:padding="@dimen/padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin"
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:padding="@dimen/padding">
 
         <!--Logo-->
         <ImageView
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/logo_sky"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/logo_sky" />
 
         <!--User-->
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <!--Icon-->
             <ImageView
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_action_user"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_action_user" />
 
             <!--TextField-->
             <EditText
-                android:hint="Username"
-                android:inputType="text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:inputType="text" />
 
         </LinearLayout>
 
         <!--Password-->
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <!--Icon-->
             <ImageView
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_action_password"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_action_password" />
 
             <!--TextField-->
             <EditText
-                android:hint="Password"
-                android:inputType="textPassword"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword" />
 
         </LinearLayout>
 
         <!--Remember-->
         <CheckBox
-            android:text="Remember User And Password"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Remember User And Password" />
 
         <!--Summit-->
         <Button
-            android:text="Submit"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Submit" />
 
 
     </LinearLayout>

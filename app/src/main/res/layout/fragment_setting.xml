@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <!--Toolbar-->
-    <include layout="@layout/toolbar_main"/>
+    <include
+        android:id="@+id/toolbarSetting"
+        layout="@layout/toolbar_main" />
 
 
     <!--Content-->
     <LinearLayout
-        android:padding="@dimen/padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin"
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:padding="@dimen/padding">
 
         <!--Logo-->
         <ImageView
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/logo_sky"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/logo_sky" />
 
         <!--IP Server-->
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <!--Icon-->
             <ImageView
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/ic_action_ip_addrdss"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_action_ip_addrdss" />
 
             <!--TextField-->
             <EditText
-                android:hint="IP Server"
-                android:inputType="text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:hint="IP Server"
+                android:inputType="text" />
 
         </LinearLayout>
 
 
-
-
-
         <!--Summit-->
         <Button
-            android:text="Save"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="Save" />
 
 
     </LinearLayout>
