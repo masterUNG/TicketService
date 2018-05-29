@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import masterung.androidthai.in.th.ticketservice.fragment.BaseTicketFragment;
 import masterung.androidthai.in.th.ticketservice.utility.ListViewAdapter;
 import masterung.androidthai.in.th.ticketservice.utility.MyConstance;
 
@@ -39,6 +40,15 @@ public class ServiceActivity extends AppCompatActivity {
 
 //        Create ListView
         createListView();
+
+//        Add Fragment
+        if (savedInstanceState == null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(R.id.contentServiceFragment,
+                            BaseTicketFragment.baseTicketInstance(idString, nameUserString))
+                    .commit();
+        }
 
     }   // Main Method
 
@@ -86,7 +96,6 @@ public class ServiceActivity extends AppCompatActivity {
         }
 
 
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -97,7 +106,7 @@ public class ServiceActivity extends AppCompatActivity {
         editor.putString("id", "");
         editor.commit();
 
-       startActivity(new Intent(ServiceActivity.this, MainActivity.class));
+        startActivity(new Intent(ServiceActivity.this, MainActivity.class));
         finish();
 
 
