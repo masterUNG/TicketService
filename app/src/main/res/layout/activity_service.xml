@@ -1,9 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ServiceActivity">
+    
+    <!--Content-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <!--Toolbar-->
+        
+        <!--Content of Fragment-->
+        
+    </LinearLayout>
+    
+    <!--Drawer-->
+    <LinearLayout
+        android:layout_gravity="start"
+        android:background="#b4ffffff"
+        android:orientation="vertical"
+        android:layout_width="320dp"
+        android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+        <!--Logo-->
+        <ImageView
+            android:src="@drawable/logo_sky"
+            android:scaleType="centerInside"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--List Menu-->
+        <ListView
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
