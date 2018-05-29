@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ticket Service</string>
+    <string name="app_name">UNG Ticket Service</string>
     <string name="title_have_space">Have Space</string>
     <string name="message_have_space">Please Fill All Every Blank</string>
 
