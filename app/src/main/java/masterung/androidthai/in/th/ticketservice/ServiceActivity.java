@@ -12,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import masterung.androidthai.in.th.ticketservice.utility.ListViewAdapter;
@@ -50,6 +52,15 @@ public class ServiceActivity extends AppCompatActivity {
         ListViewAdapter listViewAdapter = new ListViewAdapter(ServiceActivity.this,
                 titleStrings, iconInts);
         listView.setAdapter(listViewAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                drawerLayout.closeDrawers();
+
+            }
+        });
 
 
     }

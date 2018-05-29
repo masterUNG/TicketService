@@ -4,6 +4,8 @@ import masterung.androidthai.in.th.ticketservice.R;
 
 public class MyConstance {
 
+    private String urlGetAllUser = "https://android.skyict.co.th/getAllUserKet.php";
+
     private String[] titleListStrings = new String[]{"Ticker", "New Ticker",
             "Report", "About"};
 
@@ -12,6 +14,11 @@ public class MyConstance {
             R.drawable.ic_action_new_ticker,
             R.drawable.ic_action_repord,
             R.drawable.ic_action_about};
+
+
+    public String getUrlGetAllUser() {
+        return urlGetAllUser;
+    }
 
     public String[] getTitleListStrings() {
         return titleListStrings;

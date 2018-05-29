@@ -27,6 +27,7 @@ import masterung.androidthai.in.th.ticketservice.MainActivity;
 import masterung.androidthai.in.th.ticketservice.R;
 import masterung.androidthai.in.th.ticketservice.ServiceActivity;
 import masterung.androidthai.in.th.ticketservice.utility.MyAlertDialog;
+import masterung.androidthai.in.th.ticketservice.utility.MyConstance;
 import masterung.androidthai.in.th.ticketservice.utility.ReadAllData;
 
 public class MainFragment extends Fragment {
@@ -89,9 +90,12 @@ public class MainFragment extends Fragment {
 //                    No Space
                     try {
 
+                        MyConstance myConstance = new MyConstance();
                         boolean userBool = true;
                         String truePasswordString = null, nameString = null, idString = null;
-                        String urlJSON = "http://androidthai.in.th/gate/getAllUserMaster.php";
+
+                        String urlJSON = myConstance.getUrlGetAllUser();
+
                         ReadAllData readAllData = new ReadAllData(getActivity());
                         readAllData.execute(urlJSON);
                         MyAlertDialog myAlertDialog = new MyAlertDialog(getActivity());
