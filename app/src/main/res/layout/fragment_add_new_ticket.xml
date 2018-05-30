@@ -61,6 +61,7 @@
 
             <!--Assign-->
             <Spinner
+                android:id="@+id/spinnerAssign"
                 android:layout_marginRight="@dimen/margin"
                 android:layout_marginLeft="@dimen/margin"
                 android:layout_width="match_parent"
@@ -68,6 +69,7 @@
 
             <!--Severity-->
             <Spinner
+                android:id="@+id/spinnerSeverity"
                 android:layout_marginRight="@dimen/margin"
                 android:layout_marginLeft="@dimen/margin"
                 android:layout_width="match_parent"
