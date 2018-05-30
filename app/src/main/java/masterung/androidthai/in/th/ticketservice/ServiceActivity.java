@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import masterung.androidthai.in.th.ticketservice.fragment.AddNewTicketFragment;
 import masterung.androidthai.in.th.ticketservice.fragment.BaseTicketFragment;
 import masterung.androidthai.in.th.ticketservice.utility.ListViewAdapter;
 import masterung.androidthai.in.th.ticketservice.utility.MyConstance;
@@ -68,9 +69,32 @@ public class ServiceActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 drawerLayout.closeDrawers();
+                replaceToFragment(position);
 
             }
         });
+
+
+    }
+
+    private void replaceToFragment(int position) {
+
+        switch (position) {
+            case 0:
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.contentServiceFragment,
+                                BaseTicketFragment.baseTicketInstance(idString, nameUserString))
+                        .commit();
+                break;
+            case 1:
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.contentServiceFragment,
+                                AddNewTicketFragment.addNewTicketInstance(idString, nameUserString))
+                        .commit();
+                break;
+        }
 
 
     }
