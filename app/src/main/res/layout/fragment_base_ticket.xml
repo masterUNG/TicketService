@@ -4,6 +4,7 @@
 
     <!--TabLayout-->
     <android.support.design.widget.TabLayout
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         android:id="@+id/tabLayoutTicket"
         android:background="@color/colorPrimaryLight"
         android:layout_width="match_parent"
