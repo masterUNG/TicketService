@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import org.json.JSONArray;
@@ -22,6 +23,7 @@ import masterung.androidthai.in.th.ticketservice.utility.ReadAllData;
 public class AddNewTicketFragment extends Fragment {
 
     private String idString, nameUserString;
+    private String[] userAssignStrings, nameAnSurAssingStrings;
 
     public static AddNewTicketFragment addNewTicketInstance(String idString, String nameString) {
 
@@ -75,10 +77,32 @@ public class AddNewTicketFragment extends Fragment {
             Log.d("30MayV3", "User ==> " + userAssignStringArrayList.toString());
             Log.d("30MayV3", "Name and Sur ==> " + nameAnSurAssignStringArrayList.toString());
 
+            userAssignStrings = changeArrayListToArray(userAssignStringArrayList);
+            nameAnSurAssingStrings = changeArrayListToArray(nameAnSurAssignStringArrayList);
+
+            for (int i = 0; i < userAssignStrings.length; i += 1) {
+                Log.d("30MayV3", "userAssign[" + i + "] ==> " + userAssignStrings[i]);
+                Log.d("30MayV3", "nameAnSurAssign[" + i + "] ==> " + nameAnSurAssingStrings[i]);
+            }
+
+            ArrayAdapter<String> stringArrayAdapter = new ArrayAdapter<String>(getActivity(),
+                    android.R.layout.simple_list_item_1, nameAnSurAssingStrings);
+            spinner.setAdapter(stringArrayAdapter);
+
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private String[] changeArrayListToArray(ArrayList<String> stringArrayList) {
+
+        String[] strings = new String[stringArrayList.size()];
+
+        for (int i = 0; i < stringArrayList.size(); i += 1) {
+            strings[i] = stringArrayList.get(i);
+        }
+        return strings;
     }
 
     private void getValueArgument() {
