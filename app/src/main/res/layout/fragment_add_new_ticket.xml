@@ -30,6 +30,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <EditText
+                    android:id="@+id/edtSerial"
                     android:inputType="text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -52,6 +53,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <EditText
+                    android:id="@+id/edtDetail"
                     android:gravity="top"
                     android:lines="4"
                     android:layout_width="match_parent"
@@ -77,6 +79,7 @@
 
             <!--DueDate-->
             <CalendarView
+                android:id="@+id/calenderDueDate"
                 android:layout_marginRight="@dimen/margin"
                 android:layout_marginLeft="@dimen/margin"
                 android:layout_width="match_parent"
