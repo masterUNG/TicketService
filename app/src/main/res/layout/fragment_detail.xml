@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Content-->
+    <LinearLayout
+        android:layout_margin="@dimen/margin"
+        android:padding="@dimen/padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtDocNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="detail"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtSerial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="detail"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="detail"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="detail"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtServarity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="detail"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAssign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="detail"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="detail"
+            android:textSize="@dimen/h2"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <!--Take Photo-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Image Show-->
+        <ImageView
+            android:id="@+id/imvShowPhoto"
+            android:scaleType="centerInside"
+            android:src="@drawable/picture"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <!--Controller-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imvCamera"
+                android:layout_weight="1"
+                android:src="@drawable/ic_action_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/imvInsPhoto"
+                android:layout_weight="1"
+                android:src="@drawable/ic_action_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

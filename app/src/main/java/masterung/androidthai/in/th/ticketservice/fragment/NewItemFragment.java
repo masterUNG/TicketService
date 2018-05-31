@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -44,13 +45,13 @@ public class NewItemFragment extends Fragment {
 
             JSONArray jsonArray = new JSONArray(jsonString);
 
-            String[] docNoStrings = new String[jsonArray.length()];
-            String[] serialStrings = new String[jsonArray.length()];
-            String[] detailNoStrings = new String[jsonArray.length()];
-            String[] severityStrings = new String[jsonArray.length()];
-            String[] assignStrings = new String[jsonArray.length()];
-            String[] statusStrings = new String[jsonArray.length()];
-            String[] dueDateStrings = new String[jsonArray.length()];
+            final String[] docNoStrings = new String[jsonArray.length()];
+            final String[] serialStrings = new String[jsonArray.length()];
+            final String[] detailNoStrings = new String[jsonArray.length()];
+            final String[] severityStrings = new String[jsonArray.length()];
+            final String[] assignStrings = new String[jsonArray.length()];
+            final String[] statusStrings = new String[jsonArray.length()];
+            final String[] dueDateStrings = new String[jsonArray.length()];
 
             for (int i = 0; i < jsonArray.length(); i += 1) {
 
@@ -71,7 +72,29 @@ public class NewItemFragment extends Fragment {
                     statusStrings, dueDateStrings);
             listView.setAdapter(showListTicketAdapter);
 
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                    String[] strings = new String[7];
+                    strings[0] = docNoStrings[position];
+                    strings[1] = serialStrings[position];
+                    strings[2] = detailNoStrings[position];
+                    strings[3] = severityStrings[position];
+                    strings[4] = assignStrings[position];
+                    strings[5] = statusStrings[position];
+                    strings[6] = dueDateStrings[position];
+
+                    getActivity()
+                            .getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.contentServiceFragment,
+                                    DetailFragment.detailInstance(strings))
+                            .commit();
+
+
+                }
+            });
 
 
         } catch (Exception e) {
