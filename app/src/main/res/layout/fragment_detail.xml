@@ -80,7 +80,7 @@
         <!--Image Show-->
         <ImageView
             android:id="@+id/imvShowPhoto"
-            android:scaleType="centerInside"
+            android:scaleType="fitCenter"
             android:src="@drawable/picture"
             android:layout_width="match_parent"
             android:layout_height="200dp" />

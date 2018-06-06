@@ -1,6 +1,8 @@
 package masterung.androidthai.in.th.ticketservice.fragment;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -55,8 +57,22 @@ public class DetailFragment extends Fragment {
 
         if (resultCode == getActivity().RESULT_OK) {
 
-            if (requestCode == 1) {
+            uri = data.getData();
 
+            try {
+
+                BitmapFactory.Options options = new BitmapFactory.Options();
+                options.inSampleSize = 8;
+
+                Bitmap bitmap = BitmapFactory
+                        .decodeStream(getActivity()
+                                .getContentResolver()
+                                .openInputStream(uri), null, options);
+
+                showPhotoImageView.setImageBitmap(bitmap);
+
+            } catch (Exception e) {
+                e.printStackTrace();
             }
 
 
