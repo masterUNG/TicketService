@@ -48,8 +48,22 @@ public class DetailFragment extends Fragment {
 //        Camera Controller
         cameraController();
 
+//        InsertPhoto Controller
+        intsertPhotoController();
 
     }   // Main Method
+
+    private void intsertPhotoController() {
+        ImageView imageView = getView().findViewById(R.id.imvInsPhoto);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType("image/*");
+                startActivityForResult(Intent.createChooser(intent, "Please Choole Image From App"), 2);
+            }
+        });
+    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
