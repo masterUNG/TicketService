@@ -4,6 +4,13 @@ import masterung.androidthai.in.th.ticketservice.R;
 
 public class MyConstance {
 
+
+    private String hostFTPString = "ftp.androidthai.in.th";
+    private String userFTPString = "gate@androidthai.in.th";
+    private String passwordString = "Abc12345";
+    private int portAnInt = 21;
+
+
     private String urlPostTicketRequest = "https://android.skyict.co.th/addTicketRequest.php";
 
     private String urlAssignString = "https://android.skyict.co.th/getAssign.php";
@@ -27,6 +34,22 @@ public class MyConstance {
             R.drawable.ic_action_new_ticker,
             R.drawable.ic_action_repord,
             R.drawable.ic_action_about};
+
+    public String getHostFTPString() {
+        return hostFTPString;
+    }
+
+    public String getUserFTPString() {
+        return userFTPString;
+    }
+
+    public String getPasswordString() {
+        return passwordString;
+    }
+
+    public int getPortAnInt() {
+        return portAnInt;
+    }
 
     public String getUrlPostTicketRequest() {
         return urlPostTicketRequest;
